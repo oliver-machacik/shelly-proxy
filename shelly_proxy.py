@@ -70,8 +70,6 @@ class ShellyProxy:
         return f"http://{self.upstream_host}:{self.upstream_port}"
 
     async def handle(self, request: web.Request) -> web.StreamResponse:
-        """Leitet alles 1:1 an den Shelly weiter; transformiert nur
-        die für den Solakon relevante EM.GetStatus-Antwort."""
         assert self._session is not None
 
         target_url = f"{self.upstream_base}{request.rel_url}"
