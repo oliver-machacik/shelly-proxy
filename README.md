@@ -21,6 +21,12 @@ strict clients:
 
 Everything else is passed through unchanged. All other endpoints (`/rpc/Shelly.GetStatus`, etc.) are proxied.
 
+## Usage
+
+You have to run the proxy on some device in your network which is reachable by your inverter.
+The proxy has to be able to reach the Shelly.
+Point your inverter to the shelly-proxy IP instead of the real device.
+
 ## Note on AI usage
 
 The protocol differences between the Gen3 and Pro 3EM were identified by analyzing a packet capture using AI, which also generated the initial implementation.
